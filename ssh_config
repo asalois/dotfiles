@@ -1,0 +1,15 @@
+# Personal GitLab.com
+Host gitlab.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519
+
+# Private GitLab instance
+Host rci-gitlab.msu.montana.edu
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519
+
+# Personal Github
+Host github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519
+
