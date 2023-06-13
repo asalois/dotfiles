@@ -102,9 +102,33 @@ export "GOPATH=/home/alex/go:/usr/share/gocode"
 export PATH=$PATH:/home/alex/go/bin
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls=lsd
+alias cat=bat
 #source "$HOME/.cargo/env"
 #eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export BAT_THEME="Coldark-Dark"
 #eval "$(starship init zsh)"
 fortune | cowsay -f stegosaurus
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE="/usr/bin/micromamba";
+export MAMBA_ROOT_PREFIX="/home/alex/micromamba";
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    if [ -f "/home/alex/micromamba/etc/profile.d/micromamba.sh" ]; then
+        . "/home/alex/micromamba/etc/profile.d/micromamba.sh"
+    else
+        export  PATH="/home/alex/micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
+    fi
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
+
+[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/nvm.sh
+source /usr/share/nvm/bash_completion
+source /usr/share/nvm/install-nvm-exec
+
