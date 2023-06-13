@@ -42,6 +42,10 @@ fi
 unset __mamba_setup
 # <<< mamba initialize <<<
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 source "$HOME/.cargo/env"
 eval "$(starship init bash)"
 export BAT_THEME="Coldark-Dark"
@@ -49,3 +53,4 @@ alias ls=lsd
 alias cat=bat
 alias update="sudo dnf upgrade -y"
 alias tempest="ssh v16b915@tempest-login.msu.montana.edu"
+
