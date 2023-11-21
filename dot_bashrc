@@ -43,9 +43,12 @@ unset __mamba_setup
 # <<< mamba initialize <<<
 
 source "$HOME/.cargo/env"
+source "$HOME/spack/share/spack/setup-env.sh"
 eval "$(starship init bash)"
 export BAT_THEME="Coldark-Dark"
+export GIT_EDITOR=micro
+export EDITOR=micro
 alias ls=lsd
-alias cat=bat
-alias update="sudo dnf upgrade -y"
+alias cat=batcat
+alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update"
 alias tempest="ssh v16b915@tempest-login.msu.montana.edu"
