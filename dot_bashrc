@@ -50,10 +50,13 @@ HISTSIZE=10000
 HISTFILESIZE=100000
 
 source "$HOME/.cargo/env"
+source "$HOME/spack/share/spack/setup-env.sh"
 eval "$(starship init bash)"
 export BAT_THEME="Coldark-Dark"
+export EDITOR=micro
+export GIT_EDITOR=micro
 alias ls=lsd
 alias cat=bat
-alias update="sudo dnf upgrade -y"
+alias update="sudo dnf upgrade -y && flatpak update -y"
 alias tempest="ssh v16b915@tempest-login.msu.montana.edu"
 
