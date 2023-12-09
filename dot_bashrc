@@ -1,13 +1,13 @@
 # .bashrc
-
+#
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
 
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-	PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
@@ -16,39 +16,39 @@ export PATH
 
 # User specific aliases and functions
 if [ -d ~/.bashrc.d ]; then
-	for rc in ~/.bashrc.d/*; do
-		if [ -f "$rc" ]; then
-			. "$rc"
-		fi
-	done
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
 fi
-
 unset rc
 
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE="/home/alex/.local/bin/micromamba";
-export MAMBA_ROOT_PREFIX="/home/alex/micromamba";
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/alex/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
+    eval "$__conda_setup"
 else
-    if [ -f "/home/alex/micromamba/etc/profile.d/micromamba.sh" ]; then
-        . "/home/alex/micromamba/etc/profile.d/micromamba.sh"
+    if [ -f "/home/alex/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/alex/miniforge3/etc/profile.d/conda.sh"
     else
-        export  PATH="/home/alex/micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
+        export PATH="/home/alex/miniforge3/bin:$PATH"
     fi
 fi
-unset __mamba_setup
-# <<< mamba initialize <<<
+unset __conda_setup
+
+if [ -f "/home/alex/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/home/alex/miniforge3/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
 
 source "$HOME/.cargo/env"
-source "$HOME/spack/share/spack/setup-env.sh"
 eval "$(starship init bash)"
 export BAT_THEME="Coldark-Dark"
-export GIT_EDITOR=micro
-export EDITOR=micro
+export GIT_EDITOR=vim
+export EDITOR=vim
 alias ls=lsd
-alias cat=batcat
-alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update"
-alias tempest="ssh v16b915@tempest-login.msu.montana.edu"
+alias cat=bat
+alias update="sudo dnf udpate"
+
