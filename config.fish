@@ -2,10 +2,13 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     source /home/alex/spack/share/spack/setup-env.fish
     set PATH $PATH /home/alex/.cargo/bin
+    set PATH /usr/lib/go-1.21/bin $PATH
     set BAT_THEME "Coldark-Dark"
-    set GIT_EDITOR micro
-    set EDITOR micro
+    set GIT_EDITOR vim
+    set EDITOR vim
     alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update"
+    alias tempest="ssh v16b915@tempest-login.msu.montana.edu"
+    alias pts=phoronix-test-suite
     alias cat=batcat
     alias ls=lsd
     starship init fish | source
