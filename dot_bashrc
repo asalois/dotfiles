@@ -57,6 +57,6 @@ export EDITOR=micro
 export GIT_EDITOR=micro
 alias ls=lsd
 alias cat=bat
-alias update="sudo dnf upgrade -y && flatpak update -y"
+alias update="sudo dnf upgrade && flatpak update"
 alias tempest="ssh v16b915@tempest-login.msu.montana.edu"
 
