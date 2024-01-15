@@ -11,7 +11,7 @@ error_symbol = "[❯](red)"
 #vicmd_symbol = "[❮](green)"
 
 [username]
-style_user = "bold 12"
+style_user = "yellow"
 style_root = "black bold"
 format = "[$user]($style) "
 disabled = false
@@ -19,7 +19,7 @@ show_always = true
 
 [hostname]
 ssh_only = false
-format = "[@ $hostname](11) "
+format = "[@ $hostname](green) "
 trim_at = "."
 disabled = false
 
@@ -39,7 +39,7 @@ symbol = " "
 symbol = " "
 
 [directory]
-format = "[$path](14) "
+format = "[$path](blue) "
 read_only = " "
 
 [docker_context]
