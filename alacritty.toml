@@ -1,27 +1,3 @@
-[colors.bright]
-black = "#707A8C"
-blue = "#73D0FF"
-cyan = "#95E6CB"
-green = "#BAE67E"
-magenta = "#D4BFFF"
-red = "#FF3333"
-white = "#CBCCC6"
-yellow = "#FFA759"
-
-[colors.normal]
-black = "#1F2430"
-blue = "#73D0FF"
-cyan = "#95E6CB"
-green = "#BAE67E"
-magenta = "#D4BFFF"
-red = "#FF3333"
-white = "#CBCCC6"
-yellow = "#FFA759"
-
-[colors.primary]
-background = "#1F2430"
-foreground = "#CBCCC6"
-
 [env]
 TERM = "xterm-256color"
 
@@ -46,9 +22,33 @@ style = "regular"
 
 [window]
 decorations = "full"
-opacity = 1.0
+opacity = 0.85
 title = "Alacritty"
 
 [window.dimensions]
 columns = 80
 lines = 26
+
+[colors.bright]
+black = "#7F8C8D"
+blue = "#3DAEE9"
+cyan = "#16A085"
+green = "#55A649"
+magenta = "#8E44AD"
+red = "#C0392B"
+white = "#FFFFFF"
+yellow = "#FDBC4B"
+
+[colors.normal]
+black = "#1E2229"
+blue = "#1D99F3"
+cyan = "#1ABC9C"
+green = "#44853A"
+magenta = "#9B59B6"
+red = "#ED1515"
+white = "#FCFCFC"
+yellow = "#F67400"
+
+[colors.primary]
+background = "#1E2229"
+foreground = "#BBBBBB"
