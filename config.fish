@@ -1,6 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    source /home/alex/spack/share/spack/setup-env.fish
+    source /home/alex/Documents/sources/spack/share/spack/setup-env.fish
     set PATH $PATH /home/alex/.cargo/bin
     set PATH /usr/lib/go-1.21/bin $PATH
     set BAT_THEME "Coldark-Dark"
