@@ -2,7 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     source /home/alex/Documents/sources/spack/share/spack/setup-env.fish
     set PATH $PATH /home/alex/.cargo/bin
-    set PATH /usr/lib/go-1.21/bin $PATH
+    set PATH /usr/lib/go-1.22/bin $PATH
     set BAT_THEME "Coldark-Dark"
     set EDITOR vim
     alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update"
