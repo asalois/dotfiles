@@ -3,10 +3,12 @@ if status is-interactive
     source /home/alex/Documents/sources/spack/share/spack/setup-env.fish
     set PATH $PATH /home/alex/.cargo/bin
     set PATH /usr/lib/go-1.22/bin $PATH
+    set PATH $PATH /home/alex/go/bin
     set BAT_THEME "Coldark-Dark"
     set EDITOR vim
     alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update"
     alias tempest="ssh v16b915@tempest-login.msu.montana.edu"
+    alias osg="ssh alexs@ap20.uc.osg-htc.org"
     alias pts=phoronix-test-suite
     alias cat=batcat
     alias ls=lsd

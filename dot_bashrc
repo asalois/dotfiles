@@ -45,8 +45,9 @@ unset __mamba_setup
 source "$HOME/.cargo/env"
 source "$HOME/Documents/sources/spack/share/spack/setup-env.sh"
 eval "$(starship init bash)"
-#eval "$(oh-my-posh init bash --config /home/alex/.cache/oh-my-posh/themes/atomicBit.omp.json)"
 export BAT_THEME="Coldark-Dark"
+PATH=$PATH:/usr/lib/go-1.22/bin
+PATH=$PATH:/home/alex/go/bin
 alias ls=lsd
 alias cat=batcat
 alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update"
