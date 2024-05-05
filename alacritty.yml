@@ -151,30 +151,30 @@ font:
 # Colors
 colors:
   primary:
-    background: '#1F2430'
-    foreground: '#CBCCC6'
+    background: '#002B36'
+    foreground: '#839496'
 
   # Normal colors
   normal:
-    black: '#1F2430'
-    red: '#FF3333'
-    green: '#BAE67E'
-    yellow: '#FFA759'
-    blue: '#73D0FF'
-    magenta: '#D4BFFF'
-    cyan: '#95E6CB'
-    white: '#CBCCC6'
+    black: '#073642'
+    red: '#DC322F'
+    green: '#859900'
+    yellow: '#CF9A6B'
+    blue: '#268BD2'
+    magenta: '#D33682'
+    cyan: '#2AA198'
+    white: '#EEE8D5'
 
   # Bright colors
   bright:
-    black: '#707A8C'
-    red: '#FF3333'
-    green: '#BAE67E'
-    yellow: '#FFA759'
-    blue: '#73D0FF'
-    magenta: '#D4BFFF'
-    cyan: '#95E6CB'
-    white: '#CBCCC6'
+    black: '#657B83'
+    red: '#CB4B16'
+    green: '#859900'
+    yellow: '#CF9A6B'
+    blue: '#6c71c4'
+    magenta: '#D33682'
+    cyan: '#2AA198'
+    white: '#FDF6E3'
 # Background opacity
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.

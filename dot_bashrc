@@ -43,7 +43,7 @@ unset __mamba_setup
 # <<< mamba initialize <<<
 
 source "$HOME/.cargo/env"
-source "$HOME/spack/share/spack/setup-env.sh"
+source "$HOME/Documents/sources/spack/share/spack/setup-env.sh"
 eval "$(starship init bash)"
 #eval "$(oh-my-posh init bash --config /home/alex/.cache/oh-my-posh/themes/atomicBit.omp.json)"
 export BAT_THEME="Coldark-Dark"
