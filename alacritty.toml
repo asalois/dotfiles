@@ -21,13 +21,18 @@ family = "Hack Nerd Font Mono"
 style = "regular"
 
 [window]
-decorations = "full"
+decorations = "none"
 opacity = 0.9
+blur = true
 title = "Alacritty"
 
+[window.padding]
+x = 20
+y = 10 
+
 [window.dimensions]
-columns = 80
-lines = 26
+columns = 90
+lines = 28
 
 [colors.bright]
 black = "#7F8C8D"
