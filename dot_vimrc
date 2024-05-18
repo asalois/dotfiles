@@ -1,12 +1,32 @@
+"disable compatibility with vi which can cause unexpected issues.
+set nocompatible
+
+" Enable type file detection. Vim will be able to try to detect the type of file in use.
+filetype on
+
+" Load an indent file for the detected file type.
+filetype indent on
 syntax on
+
+" Asethics 
 set number
 set showcmd
-set cursorline
-filetype indent on
+set showmode
 set showmatch
+set cursorline
 set wildmenu
+set wildmode=list:longest
 set incsearch
 set hlsearch
+
+" Color Schemes
+"set termguicolors
+set background=dark
+colorscheme space-vim-dark
+"let ayucolor="mirage"
+"colorscheme ayu
+
+" set defaults for tabs
 set tabstop=2
 set shiftwidth=2
 set expandtab
