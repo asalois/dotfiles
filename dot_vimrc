@@ -22,7 +22,8 @@ set hlsearch
 " Color Schemes
 "set termguicolors
 set background=dark
-colorscheme space-vim-dark
+"colorscheme space-vim-dark
+colorscheme iceberg
 "let ayucolor="mirage"
 "colorscheme ayu
 
