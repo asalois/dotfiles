@@ -18,14 +18,15 @@ set wildmenu
 set wildmode=list:longest
 set incsearch
 set hlsearch
+set colorcolumn=80
 
 " Color Schemes
 set termguicolors
-"set background=light
-"colorscheme space-vim-dark
+set background=dark
+colorscheme iceberg
 "colorscheme base16-spacemacs
-let ayucolor="mirage"
-colorscheme ayu
+"let ayucolor="mirage"
+"colorscheme ayu
 
 "hi Normal     ctermbg=NONE guibg=NONE
 "hi LineNr     ctermbg=NONE guibg=NONE
