@@ -50,13 +50,34 @@ HISTSIZE=10000
 HISTFILESIZE=100000
 
 source "$HOME/.cargo/env"
-source "$HOME/spack/share/spack/setup-env.sh"
+source "$HOME/Documents/sources/spack/share/spack/setup-env.sh"
 eval "$(starship init bash)"
 export BAT_THEME="Coldark-Dark"
-export EDITOR=micro
-export GIT_EDITOR=micro
+export EDITOR=vim
+#export GIT_EDITOR=vim
 alias ls=lsd
 alias cat=bat
 alias update="sudo dnf upgrade && flatpak update"
 alias tempest="ssh v16b915@tempest-login.msu.montana.edu"
+alias osg="ssh alexs@ap20.uc.osg-htc.org"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/alex/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/alex/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/alex/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/alex/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/home/alex/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/home/alex/miniforge3/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
 
