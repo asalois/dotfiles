@@ -22,7 +22,7 @@ style = "regular"
 
 [window]
 decorations = "none"
-opacity = 0.9
+opacity = 1.0
 blur = true
 title = "Alacritty"
 
@@ -45,7 +45,7 @@ white = "#FFFFFF"
 yellow = "#FDBC4B"
 
 [colors.normal]
-black = "#1E2229"
+black = "#303030"
 blue = "#1D99F3"
 cyan = "#1ABC9C"
 green = "#44853A"
