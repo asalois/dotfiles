@@ -25,33 +25,6 @@ fi
 
 unset rc
 
-# >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE="/home/alex/.local/bin/micromamba";
-export MAMBA_ROOT_PREFIX="/home/alex/micromamba";
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
-else
-    if [ -f "/home/alex/micromamba/etc/profile.d/micromamba.sh" ]; then
-        . "/home/alex/micromamba/etc/profile.d/micromamba.sh"
-    else
-        export  PATH="/home/alex/micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
-    fi
-fi
-unset __mamba_setup
-# <<< mamba initialize <<<
-
-source "$HOME/.cargo/env"
-source "$HOME/Documents/sources/spack/share/spack/setup-env.sh"
-eval "$(starship init bash)"
-#eval "$(oh-my-posh init bash --config /home/alex/.cache/oh-my-posh/themes/atomicBit.omp.json)"
-export BAT_THEME="Coldark-Dark"
-alias ls=lsd
-alias cat=batcat
-alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update"
-alias tempest="ssh v16b915@tempest-login.msu.montana.edu"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/alex/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -70,4 +43,18 @@ if [ -f "/home/alex/miniforge3/etc/profile.d/mamba.sh" ]; then
     . "/home/alex/miniforge3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
+
+HISTSIZE=10000
+HISTFILESIZE=100000
+
+source "$HOME/.cargo/env"
+source "$HOME/Documents/sources/spack/share/spack/setup-env.sh"
+eval "$(starship init bash)"
+export BAT_THEME="Coldark-Dark"
+alias ls=lsd
+alias la="ls -alh"
+alias cat=batcat
+alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove && flatpak update"
+alias tempest="ssh v16b915@tempest-login.msu.montana.edu"
+
 
