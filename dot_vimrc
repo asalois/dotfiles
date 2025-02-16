@@ -22,11 +22,11 @@ set colorcolumn=80
 
 " Color Schemes
 set termguicolors
-set background=dark
-colorscheme iceberg
+"set background=dark
+"colorscheme iceberg
+colorscheme ayu
 "colorscheme base16-spacemacs
-"let ayucolor="mirage"
-"colorscheme ayu
+let ayucolor="mirage"
 
 "hi Normal     ctermbg=NONE guibg=NONE
 "hi LineNr     ctermbg=NONE guibg=NONE
