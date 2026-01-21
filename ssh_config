@@ -13,3 +13,32 @@ Host github.com
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/id_ed25519
 
+Host bigbox
+  Hostname 10.0.0.17
+  User alex
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519
+
+Host mediasrv
+  Hostname 10.0.0.15
+  User alex
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519
+
+Host d7060
+  Hostname 10.0.0.125
+  User alex
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519
+
+Host hp17
+  Hostname 10.0.0.214
+  User alex
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519
+  
+Host almavm
+  Hostname 10.0.0.247
+  User alex
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519

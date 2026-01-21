@@ -1,3 +1,7 @@
+if v:version < 802
+    packadd! dracula
+endif
+
 "disable compatibility with vi which can cause unexpected issues.
 set nocompatible
 
@@ -22,9 +26,11 @@ set colorcolumn=80
 
 " Color Schemes
 set termguicolors
-set background=dark
+"set background=dark
 colorscheme iceberg
+"colorscheme dracula
 "colorscheme base16-spacemacs
+
 "let ayucolor="mirage"
 "colorscheme ayu
 
