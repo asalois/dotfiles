@@ -11,13 +11,14 @@ esac
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
+HISTCONTROL=erasedups
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
-HISTFILESIZE=10000
+HISTFILESIZE=100000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -87,10 +88,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -113,17 +110,15 @@ if ! shopt -oq posix; then
 fi
 
 
-#source "$HOME/.cargo/env"
-#source "$HOME/Documents/sources/spack/share/spack/setup-env.sh"
+source "$HOME/.cargo/env"
 PATH=$HOME/.local/bin:$PATH
 eval "$(starship init bash)"
+
+## Themes
 export BAT_THEME="Coldark-Dark"
-PATH=/usr/lib/go-1.23/bin:$PATH
-PATH=$PATH:/home/alex/Documents/sources/zig-linux-x86_64-0.13.0
-PATH=$PATH:/home/alex/go/bin
+
+## Aliases
 alias ls=lsd
 alias la="ls -alh"
-alias cat=batcat
 alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias tempest="ssh v16b915@tempest-login.msu.montana.edu"
 
