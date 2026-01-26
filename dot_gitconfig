@@ -3,3 +3,8 @@
 [user]
 	name = Alex Salois
 	email = asalois.scholar@gmail.com
+[alias]
+  st = status
+  co = checkout
+  ci = commit
+  br = branch
