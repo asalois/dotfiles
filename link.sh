@@ -10,4 +10,5 @@ ln -sf  $dir/dot_vimrc ~/.vimrc
 ln -sf  $dir/*.vim ~/.vim/colors/
 ln -sf  $dir/dot_gitconfig ~/.gitconfig
 ln -sf  $dir/ssh_config ~/.ssh/config
-ln -sf  $dir/ghostty ~/.conig/ghosty/config
+ln -sf  $dir/ghostty ~/.config/ghostty/config
+ln -sf  $dir/htoprc ~/.config/htop/htoprc
